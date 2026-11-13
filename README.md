@@ -1,41 +1,34 @@
-# Deer Park Roof Repair Pros — static site
+# Deer Park Roof Repair Pros — v2 site
 
-Business: Deer Park Roof Repair Pros
-Domain (user buys it — do NOT buy anything here): deerparkroofrepair.com
-Service area: Deer Park, TX 77536 only
+Static HTML + CSS + vanilla JS only. No framework, no CMS, no database, no build step.
 
-## Dummy phone — IMPORTANT
-Every phone number on the site is the DUMMY number:
-- Display: (281) 555-0147
-- tel: +12815550147
+## Pages (9)
+- `/` — Roof Repair in Deer Park, TX
+- `/roof-leak-repair/` — Roof Leak Repair
+- `/storm-hail-damage-repair/` — Hail Damage Roof Repair
+- `/emergency-roof-repair-tarping/` — Emergency Roof Repair & Tarping
+- `/shingle-repair/` — Shingle Repair
+- `/flashing-pipe-boot-repair/` — Pipe Boot Repair
+- `/areas/` — Areas We Serve in Deer Park (hub; the 6 thin v1 neighbourhood pages were deleted)
+- `/contact/` — contact + form placeholder (does not send anywhere)
+- `/privacy-policy/`
 
-It is defined in `script.js` as SITE_PHONE_DISPLAY / SITE_PHONE_TEL and marked
-DUMMY in code/comments, and hard-coded in the HTML the same way. To go live,
-replace it in `script.js` and in the HTML files (search for 555-0147) with the
-real Ringba number, including in the JSON-LD schema in `index.html`.
+Plus `styles.css`, `script.js`, `favicon.svg`, `sitemap.xml`, `robots.txt`, `images/` (12 local photos).
 
-## Files
-- 14 pages (see sitemap.xml): homepage, 5 service pages, 6 neighbourhood
-  pages, contact, privacy policy
-- styles.css — shared CSS, mobile-first, system fonts, no external requests
-- script.js — mobile menu, FAQ accordion, contact-form placeholder
-- sitemap.xml, robots.txt — canonical domain deerparkroofrepair.com
+## Dummy phone — swap in ONE place
+Phone shown everywhere is the DUMMY **(281) 555-0147** (tel +12815550147). It is defined in
+`script.js` as SITE_PHONE_DISPLAY / SITE_PHONE_TEL and hard-coded in the HTML. Search for
+`555-0147` to swap it for the real Ringba number before real calls / LeadSmart.
 
-## Rules followed
-- No Pricing page, no Reviews/Testimonials page, no fake testimonials,
-  no fake ratings, no price list anywhere on the site.
-- No street address published — service-area business, Deer Park, TX 77536.
-- Contact form is a placeholder only — it does not send anywhere.
-- No arrival times, years in business, or unverified local landmarks invented.
-- Copy was written fresh for this site; not copied from competitor sites.
-
-## Test locally
-cd site && python3 -m http.server 8137
-Then open http://127.0.0.1:8137/
-
-## Deploy (NOT done — parent agent to do with user approval)
-1. Create private GitHub repo `deer-park-roof-repair-pros`, push these files.
-2. Connect repo to Vercel (note: Vercel team scope muse-7bfb needed a
-   team-access approval on 2026-11-13 — clear that first).
-3. Add custom domain deerparkroofrepair.com after the user buys it.
-4. Submit sitemap to Search Console.
+## Rules this build follows
+- No fake reviews, star ratings, testimonials, years-in-business, licence numbers, real
+  street address, or real roofer names anywhere.
+- No Pricing page and no Reviews page as standalone pages. Price RANGES (Houston 2026,
+  sourced from RISE Mar 2026 / Angi Jul 2026 / JC&C Sep 2026) appear in a section on
+  service pages, labelled as ranges, not quotes. Tarping is shown as $150–$1,500 across
+  sources — never a single price.
+- Photos in `images/` are illustrative photos downloaded from public roofing pages
+  (see IMAGE-SOURCES.md), not photos of work at a specific Deer Park home. The footer
+  says so on every page.
+- No guaranteed response times. Hours: Mon–Sat 7am–7pm, emergency tarping 24/7 (call first).
+- No LeadSmart application, no purchases, no deploy — local build only.
