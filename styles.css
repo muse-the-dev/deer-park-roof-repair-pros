@@ -1,0 +1,73 @@
+/* Deer Park Roof Repair Pros — shared styles. Static site, system fonts, no external requests. */
+:root{--navy:#12263a;--blue:#1b6ca8;--blue-dark:#14507e;--accent:#e8a317;--bg:#f4f6f8;--card:#fff;--text:#1e2a33;--muted:#5a6b78;--line:#dbe3e8;--green:#1e7a4c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+a{color:var(--blue)}
+img{max-width:100%}
+.container{max-width:1020px;margin:0 auto;padding:0 18px}
+.topbar{background:var(--navy);color:#fff;font-size:.92rem}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar a{color:#fff;font-weight:700;text-decoration:none}
+.topbar span{opacity:.85}
+header.site{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+header.site .container{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:12px;padding-bottom:12px}
+.logo{font-size:1.25rem;font-weight:800;color:var(--navy);text-decoration:none;line-height:1.2}
+.logo small{display:block;font-size:.78rem;color:var(--blue);font-weight:700;letter-spacing:.02em}
+nav.main{display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{color:var(--navy);text-decoration:none;padding:8px 10px;border-radius:6px;font-weight:600;font-size:.95rem}
+nav.main a:hover,nav.main a.active{background:var(--bg);color:var(--blue)}
+.menu-btn{display:none;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:9px 12px;font-size:1rem;cursor:pointer}
+.hero{background:var(--navy);color:#fff;padding:44px 0 40px}
+.hero h1{font-size:2.15rem;line-height:1.15;margin:0 0 12px}
+.hero p.lead{font-size:1.12rem;max-width:640px;margin:0 0 20px;color:#dbe8f2}
+.btn{display:inline-block;background:var(--accent);color:#12263a;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:8px;margin:4px 8px 4px 0}
+.btn.secondary{background:#fff;color:var(--navy);border:2px solid #fff}
+.btn.call{background:var(--green);color:#fff}
+.btn:hover{opacity:.92}
+.trust{font-size:.92rem;color:#cfe0ec;margin-top:14px}
+section{padding:34px 0}
+section.alt{background:var(--bg)}
+h2{font-size:1.55rem;color:var(--navy);line-height:1.25;margin:0 0 14px}
+h3{color:var(--navy);margin:18px 0 8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card h3{margin-top:0}
+.card p{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;counter-reset:step}
+.step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.step strong{font-size:1.8rem;color:var(--blue);display:block}
+ul.check{list-style:none;padding:0}
+ul.check li{padding:6px 0 6px 28px;position:relative}
+ul.check li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.faq{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:last-child{border-bottom:0}
+.faq-q{width:100%;text-align:left;background:#fff;border:0;padding:16px 18px;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.faq-a{display:none;padding:0 18px 16px;color:var(--muted)}
+.faq-item.open .faq-a{display:block}
+.cta-band{background:var(--blue);color:#fff;text-align:center}
+.cta-band h2{color:#fff}
+.cta-band p{color:#dbe8f2}
+footer.site{background:var(--navy);color:#cfe0ec;padding:34px 0 22px;font-size:.95rem}
+footer.site a{color:#fff}
+footer.site h3{color:#fff;margin-top:0}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.foot-grid ul{list-style:none;padding:0;margin:0}
+.foot-grid li{margin:6px 0}
+.small{font-size:.88rem;color:var(--muted)}
+.sticky-call{display:none;position:fixed;left:0;right:0;bottom:0;background:var(--green);color:#fff;text-align:center;padding:14px;font-weight:800;text-decoration:none;z-index:30;font-size:1.1rem}
+form{max-width:560px}
+label{display:block;font-weight:700;margin:14px 0 5px}
+input,select,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;font:inherit}
+button.submit{background:var(--blue);color:#fff;border:0;padding:13px 22px;border-radius:8px;font-weight:800;cursor:pointer;font-size:1rem}
+.notice{background:#fff8e1;border:1px solid #f0d48a;border-radius:8px;padding:14px 16px;margin:16px 0}
+@media(max-width:760px){
+  .hero h1{font-size:1.7rem}
+  nav.main{display:none;width:100%;flex-direction:column}
+  nav.main.open{display:flex}
+  .menu-btn{display:block}
+  .topbar span{display:none}
+  .sticky-call{display:block}
+  body{padding-bottom:52px}
+}
